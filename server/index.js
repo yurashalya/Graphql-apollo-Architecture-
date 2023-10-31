@@ -18,7 +18,9 @@ const createUser = (input) => {
 
 const root = {
     getAllUsers: () => users,
-    getUser: ({id}) => users.find(user => user.id === id),
+    getUser: ({id}) => {
+        return users.find(user => user.id == id)
+    },
     createUser: ({input}) => {
         const user = createUser(input)
         users.push(user)
